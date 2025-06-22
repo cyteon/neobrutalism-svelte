@@ -30,6 +30,7 @@
     "vite-plugin-devtools-json": "^0.2.0"
   },
   "dependencies": {
+    "@sveltejs/adapter-static": "^3.0.8",
     "lucide-svelte": "^0.522.0"
   }
 }
