@@ -1,5 +1,7 @@
 <script lang="ts">
     import { browser } from "$app/environment";
+    import { onMount } from "svelte";
+    import { page } from "$app/stores";
 
     const links = [
         "Getting started",
@@ -39,11 +41,7 @@
         },*/
     ]
 
-    let path: String = "";
-
-    if (browser) {
-        path = window.location.pathname;
-    }
+    $: path = $page.url.pathname;
 </script>
 
 <aside class="scrollbar top-[70px] bg-secondary-background h-[calc(100svh-70px)] max-h-[calc(100svh-70px)] w-[250px] overflow-y-auto border-r-4 lg:block hidden border-border">
