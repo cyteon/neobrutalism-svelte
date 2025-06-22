@@ -1,5 +1,6 @@
 <script lang="ts">
     import { cva, type VariantProps } from "class-variance-authority";
+    import type { HTMLButtonAttributes } from "svelte/elements";
 
     const button = cva(
         "inline-flex items-center justify-center whitespace-nowrap rounded-base text-sm font-base ring-offset-white transition-all gap-2 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-black focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50",
@@ -33,6 +34,10 @@
             },
         },
     )
+
+    interface $$Props extends HTMLButtonAttributes, VariantProps<typeof button> {
+        class?: string;
+    }
 
     export let variant: $$Props["variant"] = "default";
     export let size: $$Props["size"] = "default";
