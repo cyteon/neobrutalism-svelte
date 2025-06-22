@@ -1,0 +1,22 @@
+# Introduction
+
+<script>
+    import { goto } from "$app/navigation";
+    import Button from "$lib/components/ui/button.svelte";
+    import { ArrowRight } from "lucide-svelte";
+</script>
+
+Neobrutalism svelte is a collection of neobrutalism-styled svelte Tailwind components. 
+Most of the components are based on <a target="_blank" href="https://ui.shadcn.com/">Shadcn UI</a>.
+This is a svelte port of the <a target="_blank" href="https://neobrutalism.dev/">Neobrutalism</a> design system.
+
+Neobrutalism is a mix of regular brutalism in web design and more modern typography,
+illustration, and animation standards. Neobrutalism refuses the usual components
+of UX-UI design and embraces uncomfortable design elements, and it is more fearless
+to use distinctive color palettes.
+
+<div class="w-full flex mt-14">
+    <Button class="ml-auto" onclick={() => goto("/docs/installation")}>
+        Installation <ArrowRight />
+    </Button>
+</div>
