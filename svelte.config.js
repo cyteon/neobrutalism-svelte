@@ -15,6 +15,10 @@ const config = {
     alias: {
       "@/*": "./src/lib/*",
     },
+
+	prerender: {
+		handleHttpError: "ignore",
+	}
   },
 };
 
