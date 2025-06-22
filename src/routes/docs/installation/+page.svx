@@ -1,0 +1,33 @@
+<script>
+    import { goto } from "$app/navigation";
+    import Button from "$lib/components/ui/button.svelte";
+    import { ArrowLeft, ArrowRight } from "lucide-svelte";
+</script>
+
+# Installation
+
+Learn how to install neobrutalism components.
+
+## 1. Initialize shadcn
+
+As explained in introduction, most of these components are based onShadcn UI. 
+
+Visit the <a href="https://shadcn-svelte.com/docs/installation" target="_blank">shadcn-svelte docs</a> to see how to initialize shadcn.
+
+## 2. Add styling
+
+Delete the existing styling from your `globals.css` and paste <a target="_blank" href="/styling">desired styling</a>.
+
+## 3. Install components
+
+Each components page will have installation instructions.
+
+<div class="w-full flex mt-14">
+    <Button onclick={() => goto("/docs/resources")}>
+        <ArrowLeft /> Introduction
+    </Button>
+
+    <Button class="ml-auto" onclick={() => goto("/docs/button")}>
+        Resources <ArrowRight />
+    </Button>
+</div>

@@ -1,0 +1,19 @@
+<script>
+    import { goto } from "$app/navigation";
+    import Button from "$lib/components/ui/button.svelte";
+    import { ArrowLeft, ArrowRight } from "lucide-svelte";
+</script>
+
+# Changelog
+
+nothing here yet
+
+<div class="w-full flex mt-14">
+    <Button onclick={() => goto("/docs/resources")}>
+        <ArrowLeft /> Resources
+    </Button>
+
+    <Button class="ml-auto" onclick={() => goto("/docs/button")}>
+        Button <ArrowRight />
+    </Button>
+</div>

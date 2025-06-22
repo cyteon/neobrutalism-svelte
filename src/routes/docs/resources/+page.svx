@@ -1,11 +1,11 @@
-# Resources
-List of resoruces that can help you with getting into neobrutalism layouts.
-
 <script>
     import { goto } from "$app/navigation";
     import Button from "$lib/components/ui/button.svelte";
     import { ArrowLeft, ArrowRight } from "lucide-svelte";
 </script>
+
+# Resources
+List of resoruces that can help you with getting into neobrutalism layouts.
 
 ## Fonts
 

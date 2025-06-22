@@ -1,10 +1,10 @@
-# Introduction
-
 <script>
     import { goto } from "$app/navigation";
     import Button from "$lib/components/ui/button.svelte";
     import { ArrowRight } from "lucide-svelte";
 </script>
+
+# Introduction
 
 Neobrutalism Svelte is a collection of neobrutalism-styled Svelte Tailwind components. 
 Most of the components are based on <a target="_blank" href="https://ui.shadcn.com/">Shadcn UI</a>.
