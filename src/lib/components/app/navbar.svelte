@@ -8,18 +8,14 @@
 
             <div class="items-center text-base font-base xl:gap-10 lg:flex gap-10 hidden">
                 <a href="/docs">Docs</a>
-
                 <a href="/docs/accordion">Components</a>
-
+                <!--
                 <a href="/styling">Styling</a>
-
                 <a href="/charts">Charts</a>
-
                 <a href="/stars">Stars</a>
-
                 <a href="/templates">Templates</a>
-
                 <a href="/showcase">Showcase</a>
+                -->
             </div>
         </div>
 
