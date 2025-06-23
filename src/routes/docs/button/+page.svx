@@ -1,6 +1,6 @@
 <script lang="ts">
   import ComponentPreview from "$lib/components/app/component-preview.svelte";
-    import ButtonExample from "$lib/examples/button.svelte";
+  import ButtonExample from "$lib/examples/button.svelte";
   import ButtonExampleCode from "$lib/examples/button.svelte?raw";
 </script>
 
