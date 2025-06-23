@@ -8,7 +8,7 @@
 
             <div class="items-center text-base font-base xl:gap-10 lg:flex gap-10 hidden">
                 <a href="/docs">Docs</a>
-                <a href="/docs/components/accordion">Components</a>
+                <a href="/docs/button">Components</a>
                 <!--
                 <a href="/styling">Styling</a>
                 <a href="/charts">Charts</a>
