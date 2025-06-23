@@ -27,7 +27,7 @@ Each components page will have installation instructions.
         <ArrowLeft /> Introduction
     </Button>
 
-    <Button class="ml-auto" onclick={() => goto("/docs/button")}>
+    <Button class="ml-auto" onclick={() => goto("/docs/resources")}>
         Resources <ArrowRight />
     </Button>
 </div>
