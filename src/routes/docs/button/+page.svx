@@ -1,5 +1,6 @@
 <script lang="ts">
   import ComponentPreview from "$lib/components/app/component-preview.svelte";
+  import Installation from "$lib/components/app/installation.svelte";
 
   import ButtonExample from "$lib/examples/button/default.svelte";
   import ButtonExampleCode from "$lib/examples/button/default.svelte?raw";
@@ -9,3 +10,6 @@
 Displays a button or a component that looks like a button.
 
 <ComponentPreview code={ButtonExampleCode} component={ButtonExample} />
+
+## Installation
+<Installation component="button" />

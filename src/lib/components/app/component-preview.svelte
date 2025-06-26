@@ -1,4 +1,6 @@
 <script lang="ts">
+    import CopyButton from "./copy-button.svelte";
+
     let { code, component } = $props();
     let showPreview = $state(true);
 </script>
@@ -7,7 +9,7 @@
     <button 
         class={`
             h-full transition-all w-full px-2 py-1 border
-            ${showPreview ? "text-main-foreground text-main-foreground bg-main border-border" : ""} 
+            ${showPreview ? "text-main-foreground bg-main border-border" : ""} 
         `}       
         onclick={() => (showPreview = true)}
     >
@@ -17,7 +19,7 @@
     <button 
         class={`
             h-full transition-all w-full px-2 py-1 border
-            ${showPreview ? "" : "text-main-foreground text-main-foreground bg-main border-border"} 
+            ${showPreview ? "" : "text-main-foreground bg-main border-border"} 
         `}
         onclick={() => (showPreview = false)}
     >
@@ -30,5 +32,5 @@
         {@render component()}
     </div>
 {:else}
-    <pre class="bg-black border-2 border-border code text-sm max-h-[300px] overflow-auto p-4 not-prose text-white shadow-shadow">{code}</pre>
+    <pre class="relative bg-black border-2 border-border code text-sm max-h-[300px] overflow-auto p-4 not-prose text-white shadow-shadow font-mono">{code}<CopyButton content={code} /></pre>
 {/if}
