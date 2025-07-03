@@ -4,7 +4,7 @@ import path from "path";
 const componentsDir = "src/lib/components/ui";
 const outputDir = "static/r";
 
-async function generateComponentJson(dir: string) {
+async function generateComponentJson(dir) {
     const files = fs.readdirSync(dir);
 
     files.forEach(file => {
