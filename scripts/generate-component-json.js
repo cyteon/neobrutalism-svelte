@@ -12,11 +12,37 @@ async function generateComponentJson(dir) {
         const stat = fs.statSync(filePath);
 
         if (stat.isDirectory()) {
-            fs.mkdirSync(path.join(outputDir, file), { recursive: true });
+            const componentName = filePath.split("/").pop();
 
-            generateComponentJson(filePath);
-        } else if (file.endsWith(".svelte")) {
-            const componentName = filePath.replace("src/lib/components/ui/", "").replace(".svelte", "");
+            let jsonContent = {
+                "$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+                name: componentName,
+                type: "registry:ui",
+                title: componentName.charAt(0).toUpperCase() + componentName.slice(1),
+                dependencies: ["class-variance-authority"],
+                files: []
+            };
+
+            const subFiles = fs.readdirSync(filePath);
+
+            subFiles.forEach(subFile => {
+                const subFilePath = path.join(filePath, subFile);
+                
+                jsonContent.files.push({
+                    target: componentName + "/" + subFile,
+                    content: fs.readFileSync(subFilePath, "utf-8"),
+                    type: "registry:ui"
+                });
+            });
+
+            const outputFilePath = path.join(outputDir, `${componentName}.json`);
+            fs.writeFileSync(outputFilePath, JSON.stringify(jsonContent, null, 2));
+        } else {
+            let componentName = filePath.split("/").pop();
+            const fileExtension = path.extname(file);
+            
+            componentName = componentName.replace(fileExtension, "");
+
             const content = fs.readFileSync(filePath, "utf-8");
 
             const jsonContent = {
@@ -27,7 +53,7 @@ async function generateComponentJson(dir) {
                 dependencies: ["class-variance-authority"],
                 files: [
                     {
-                        target: `${componentName}.svelte`,
+                        target: `${componentName}${fileExtension}`,
                         content,
                         type: "registry:ui"
                     }
@@ -42,6 +68,9 @@ async function generateComponentJson(dir) {
 
 (async () => {
     if (!fs.existsSync(outputDir)) {
+        fs.mkdirSync(outputDir, { recursive: true });
+    } else {
+        fs.rmSync(outputDir, { recursive: true, force: true });
         fs.mkdirSync(outputDir, { recursive: true });
     }
 
