@@ -1,9 +1,25 @@
 <script lang="ts">
   import ComponentPreview from "$lib/components/app/component-preview.svelte";
   import Installation from "$lib/components/app/installation.svelte";
+  import Codeblock from "$lib/components/app/codeblock.svelte";
 
   import ButtonExample from "$lib/examples/button/default.svelte";
   import ButtonExampleCode from "$lib/examples/button/default.svelte?raw";
+
+  import ButtonReverseExample from "$lib/examples/button/reverse.svelte";
+  import ButtonReverseExampleCode from "$lib/examples/button/reverse.svelte?raw";
+
+  import ButtonNoShadowExample from "$lib/examples/button/no-shadow.svelte";
+  import ButtonNoShadowExampleCode from "$lib/examples/button/no-shadow.svelte?raw";
+
+  import ButtonNeutralExample from "$lib/examples/button/neutral.svelte";
+  import ButtonNeutralExampleCode from "$lib/examples/button/neutral.svelte?raw";
+
+  import ButtonWithIconExample from "$lib/examples/button/with-icon.svelte";
+  import ButtonWithIconExampleCode from "$lib/examples/button/with-icon.svelte?raw";
+
+  import ButtonIconExample from "$lib/examples/button/icon.svelte";
+  import ButtonIconExampleCode from "$lib/examples/button/icon.svelte?raw";
 </script>
 
 # Button
@@ -13,3 +29,29 @@ Displays a button or a component that looks like a button.
 
 ## Installation
 <Installation component="button" />
+
+## Usage
+
+<Codeblock text={"import Button from \"$lib/components/ui/button.svelte\";"} />
+<br />
+<Codeblock text={`<Button>Button</Button>`} />
+
+## Examples
+
+### Default
+<ComponentPreview code={ButtonExampleCode} component={ButtonExample} />
+
+### Reverse
+<ComponentPreview code={ButtonReverseExampleCode} component={ButtonReverseExample} />
+
+### No Shadow
+<ComponentPreview code={ButtonNoShadowExampleCode} component={ButtonNoShadowExample} />
+
+### Neutral
+<ComponentPreview code={ButtonNeutralExampleCode} component={ButtonNeutralExample} />
+
+### With Icon
+<ComponentPreview code={ButtonWithIconExampleCode} component={ButtonWithIconExample} />
+
+### Icon Only
+<ComponentPreview code={ButtonIconExampleCode} component={ButtonIconExample} />

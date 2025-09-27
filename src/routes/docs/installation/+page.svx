@@ -16,9 +16,12 @@ Visit the <a href="https://shadcn-svelte.com/docs/installation" target="_blank">
 
 ## 2. Add styling
 
-Delete the existing styling from your `app.css` and paste <a target="_blank" href="https://www.neobrutalism.dev/styling">desired styling</a>. <br>
-This will redirect to the neobrutalism.dev website, which has all the styling options, copy from there into your `app.css` css file, then return here. <br>
-Note the site will say global.css, but that is for the react version.
+Open your `app.css` file and delete any existing styles.  
+Then, visit the <a href="https://www.neobrutalism.dev/styling" target="_blank">Neobrutalism Styling Page</a> to choose your preferred design.  
+
+> **Note:** The site refers to `global.css`, which is intended for the React version. For your setup, copy the styles directly into your `app.css`.
+
+Once you've added the styles, return here to continue.
 
 ## 3. Install components
 
