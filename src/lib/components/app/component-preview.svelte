@@ -28,7 +28,7 @@
 </div>
 
 {#if showPreview}
-    <div class="grid not-prose flex w-full items-center justify-center z-15 relative border-2 mb-5 min-h-[200px] border-border border-t-1 sm:px-10 px-5 sm:py-20 py-10 shadow-shadow bg-white">
+    <div class="grid-bg not-prose flex w-full items-center justify-center z-15 relative border-2 mb-5 min-h-[200px] border-border border-t-1 sm:px-10 px-5 sm:py-20 py-10 shadow-shadow bg-white">
         {@render component()}
     </div>
 {:else}

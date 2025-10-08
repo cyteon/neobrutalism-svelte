@@ -1,0 +1,22 @@
+<script lang="ts">
+  import ComponentPreview from "$lib/components/app/component-preview.svelte";
+  import Installation from "$lib/components/app/installation.svelte";
+  import Codeblock from "$lib/components/app/codeblock.svelte";
+
+  import LabelExample from "$lib/examples/label.svelte";
+  import LabelExampleCode from "$lib/examples/label.svelte?raw";
+</script>
+
+# Label
+Renders an accessible label associated with controls.
+
+<ComponentPreview code={LabelExampleCode} component={LabelExample} />
+
+## Installation
+<Installation component="label" />
+
+## Usage
+
+<Codeblock text={"import Label from \"$lib/components/ui/label.svelte\";"} />
+<br />
+<Codeblock text={`<Label>This is a label</Label>`} />

@@ -1,0 +1,22 @@
+<script lang="ts">
+  import ComponentPreview from "$lib/components/app/component-preview.svelte";
+  import Installation from "$lib/components/app/installation.svelte";
+  import Codeblock from "$lib/components/app/codeblock.svelte";
+
+  import InputExample from "$lib/examples/input.svelte";
+  import InputExampleCode from "$lib/examples/input.svelte?raw";
+</script>
+
+# Input
+Displays a form input field or a component that looks like an input field.
+
+<ComponentPreview code={InputExampleCode} component={InputExample} />
+
+## Installation
+<Installation component="input" />
+
+## Usage
+
+<Codeblock text={"import Label from \"$lib/components/ui/input.svelte\";"} />
+<br />
+<Codeblock text={`<Input placeholder="Enter something..." />`} />

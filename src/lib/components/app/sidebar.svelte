@@ -33,7 +33,15 @@
         {
             href: "/docs/button",
             text: "Button",
-        }
+        },
+        {
+            href: "/docs/input",
+            text: "Input",
+        },
+        {
+            href: "/docs/label",
+            text: "Label",
+        },
         /*"Stars",
         {
             href: "/docs/stars",
