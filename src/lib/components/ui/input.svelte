@@ -1,12 +1,14 @@
 <script lang="ts">
     import { cn } from "@/utils";
-    import type { HTMLButtonAttributes } from "svelte/elements";
+    import type { HTMLInputAttributes } from "svelte/elements";
 
-    interface $$Props extends HTMLButtonAttributes {
+    interface $$Props extends HTMLInputAttributes {
         class?: string;
     }
     
     let { class: userClass = "", ...restProps } = $$props;
+
+    export let value = "";
 </script> 
 
 <input
@@ -16,6 +18,6 @@
             userClass
         )
     }
-    data-slot="input"
+    bind:value={value}
     {...restProps}
 />

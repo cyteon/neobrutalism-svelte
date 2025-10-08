@@ -1,8 +1,8 @@
 <script lang="ts">
     import { cn } from "@/utils";
-    import type { HTMLButtonAttributes } from "svelte/elements";
+    import type { HTMLLabelAttributes } from "svelte/elements";
 
-    interface $$Props extends HTMLButtonAttributes {
+    interface $$Props extends HTMLLabelAttributes {
         class?: string;
     }
     

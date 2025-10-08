@@ -35,6 +35,10 @@
             text: "Button",
         },
         {
+            href: "/docs/card",
+            text: "Card",
+        },
+        {
             href: "/docs/input",
             text: "Input",
         },

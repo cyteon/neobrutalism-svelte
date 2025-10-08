@@ -5,7 +5,4 @@
 </script>
 
 
-<pre class="relative bg-black border-2 border-border code text-sm overflow-auto p-4 not-prose text-white shadow-shadow whitespace-normal">
-    {text}
-    <CopyButton content={text} />
-</pre>
+<pre class="relative bg-black border-2 border-border code text-sm max-h-[300px] overflow-auto p-4 not-prose text-white shadow-shadow font-mono">{text}<CopyButton content={text} /></pre>
